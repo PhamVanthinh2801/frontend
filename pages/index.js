@@ -65,6 +65,7 @@ const Home = ({ global }) => {
           {picture.data.map((pic) =>
             pic.attributes.image.data.map((item) => (
               <div
+                key={item.id}
                 className='flex items-center justify-center'
                 style={{
                   width: "325px",
