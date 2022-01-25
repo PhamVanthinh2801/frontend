@@ -50,25 +50,33 @@ const Home = ({ global }) => {
         <p className='text-[#000000] text-center text-2xl font-medium pb-2 cursor-pointer hover:text-red-700 text-left pr-5 pl-5'>
           Một số hình ảnh thực hiện chương trình:
         </p>
+
         <Carousel
           responsive={responsive}
           swipeable={false}
           draggable={false}
           showDots
-          ssr={true} // means to render carousel on server-side.
+          ssr={true}
           infinite={true}
           autoPlay
           autoPlaySpeed={3000}
           keyBoardControl={false}
           customTransition='all 2s'
+          removeArrowOnDeviceType={[
+            "tablet",
+            "mobile",
+            "desktop",
+            "superLargeDesktop",
+          ]}
           transitionDuration={1000}
         >
           {picture.data.map((pic) =>
             pic.attributes.image.data.map((item) => (
               <div
                 key={item.id}
-                className='flex items-center justify-center'
+                className='flex items-center justify-center '
                 style={{
+                  margin: "auto",
                   width: "325px",
                   height: "300px",
                   backgroundRepeat: "no-repeat",
