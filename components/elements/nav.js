@@ -32,7 +32,7 @@ export default function Nav() {
             style={{ cursor: "pointer", borderRadius: "12px" }}
           />
         </div>
-        <div className='flex flex-row justify-left  w-full'>
+        <div className='flex flex-row justify-left  w-full mr-2'>
           <p
             style={{
               color: "#8B0000",
