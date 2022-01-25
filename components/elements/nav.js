@@ -20,12 +20,15 @@ export default function Nav() {
       >
         <div
           className='ml-2'
-          style={{ border: "solid 1px red", borderRadius: "12px" }}
+          style={{
+            // border: "solid 1px red"
+            borderRadius: "12px",
+          }}
         >
           <img
-            src='https://res.cloudinary.com/hiname/image/upload/v1642753369/VIETKA_TV_LOGO_2020-1_o41l1p.png'
-            width={134}
-            height={124}
+            src='https://res.cloudinary.com/hiname/image/upload/v1643085483/vk_aawlju.jpg'
+            width={114}
+            height={104}
             style={{ cursor: "pointer", borderRadius: "12px" }}
           />
         </div>
