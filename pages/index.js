@@ -39,6 +39,7 @@ const Home = ({ global }) => {
         url='https://youtu.be/q60dz7KftKc'
         width='100%'
         height='640px'
+        playing={true}
         style={{ marginTop: "20px" }}
       />
       <div
