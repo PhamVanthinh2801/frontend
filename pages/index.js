@@ -123,7 +123,7 @@ const Home = ({ global }) => {
     </Layout>
   );
 };
-//testing connetc image to server01
+//testing connetc image to server update
 export const getStaticProps = async () => {
   const client = new ApolloClient({
     uri: process.env.STRAPI_GRAPHQL_URL,

@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
           href='https://res.cloudinary.com/hiname/image/upload/v1643085483/vk_aawlju.jpg'
         />
       </Head>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }
