@@ -95,7 +95,7 @@ const Home = ({ global }) => {
           ))}
         </Carousel>
       </div>
-      {/* this */}
+      {/* this update  */}
       <div className='grid grid-cols-1 gap-1 md:grid-cols-1'>
         <div className='mt-12'>
           <div className='mb-0'>
