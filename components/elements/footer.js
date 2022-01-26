@@ -29,7 +29,7 @@ const Footer = () => {
 
       <div className='flex justify-center pb-5 '>
         <div className='m-2  h-8 w-8 cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300'>
-          <Link href='https://www.facebook.com/vietkatv/'>
+          <Link href='https://www.facebook.com/vietkatv'>
             <img
               src='https://res.cloudinary.com/hiname/image/upload/v1643172052/logo-facebook_xwiukt.png'
               width={74}
