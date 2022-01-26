@@ -6,12 +6,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 const Home = ({ global }) => {
-  console.log(global);
   const picture = global.picture_managers;
   const project = global.project_managers;
-  const numbers = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 8,
-  ];
   // const duan = ["duan", "vietcombank", "21"];
   const responsive = {
     superLargeDesktop: {
@@ -86,7 +82,7 @@ const Home = ({ global }) => {
                 }}
               >
                 <img
-                  src={`https://vietkativi.herokuapp.com${item.attributes.url}`}
+                  src={`https://bevietka2.herokuapp.com${item.attributes.url}`}
                   style={{
                     width: "305px",
                     height: "213px",
@@ -116,7 +112,7 @@ const Home = ({ global }) => {
               >
                 <a href={`${proj.attributes.link}`}>
                   <img
-                    src={`https://vietkativi.herokuapp.com${proj.attributes.image.data.attributes.url}`}
+                    src={`https://bevietka2.herokuapp.com${proj.attributes.logo.data.attributes.url}`}
                     className='h-3/4 p-1 w-full rounded-lg '
                   />
                   <p className='text-center text-[black] text-lg font-medium cursor-pointer'>

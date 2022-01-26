@@ -22,15 +22,22 @@ const GET_PAGE_DATA = gql`
             data {
               attributes {
                 name
-                number
-                link
-                image {
+                url
+                logo {
                   data {
                     attributes {
                       url
                     }
                   }
                 }
+              }
+            }
+          }
+          contents {
+            data {
+              attributes {
+                name
+                richtext
               }
             }
           }
