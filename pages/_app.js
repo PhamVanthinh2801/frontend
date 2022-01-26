@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import "@/styles/chekeditor.css";
 import Head from "next/head";
-//up
+//upâadasdasd
 function MyApp({ Component, pageProps }) {
   return (
     <>
