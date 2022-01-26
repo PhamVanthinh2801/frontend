@@ -116,7 +116,7 @@ const Home = ({ global }) => {
                     className='h-3/4 p-1 w-full rounded-lg '
                   />
                   <p className='text-center text-[black] text-lg font-medium cursor-pointer'>
-                    {proj.attributes.number} dự án
+                    {proj.attributes.name} dự án
                   </p>
                 </a>
               </div>
