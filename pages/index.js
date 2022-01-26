@@ -4,14 +4,15 @@ import Layout from "@/components/sections/Layout";
 import ReactPlayer from "react-player";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import fetchdata from "@/graphql/fetchdata";
 
 const Home = ({ global }) => {
-  const picture = global.picture_managers;
-  const project = global.project_managers;
-  // const duan = ["duan", "vietcombank", "21"];
+  // const picture = global.picture_managers;
+  // const project = global.project_managers;
+  const listpic = fetchdata.pictures;
+  const listlogo = fetchdata.logo;
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 3,
     },
@@ -66,34 +67,32 @@ const Home = ({ global }) => {
           ]}
           transitionDuration={1000}
         >
-          {picture.data.map((pic) =>
-            pic.attributes.image.data.map((item) => (
-              <div
-                key={item.id}
-                className='flex items-center justify-center '
+          {listpic.map((Url, index) => (
+            <div
+              key={index}
+              className='flex items-center justify-center '
+              style={{
+                margin: "auto",
+                width: "325px",
+                height: "300px",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+                backgroundImage:
+                  "url(https://res.cloudinary.com/hiname/image/upload/v1642915643/film_lpxspf.png)",
+              }}
+            >
+              <img
+                src={`${Url}`}
                 style={{
-                  margin: "auto",
-                  width: "325px",
-                  height: "300px",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "contain",
-                  backgroundImage:
-                    "url(https://res.cloudinary.com/hiname/image/upload/v1642915643/film_lpxspf.png)",
+                  width: "305px",
+                  height: "213px",
+                  borderRadius: "16px",
+                  marginTop: "-6%",
+                  marginLeft: "2px",
                 }}
-              >
-                <img
-                  src={`https://bevietka2.herokuapp.com${item.attributes.url}`}
-                  style={{
-                    width: "305px",
-                    height: "213px",
-                    borderRadius: "16px",
-                    marginTop: "-6%",
-                    marginLeft: "2px",
-                  }}
-                />
-              </div>
-            ))
-          )}
+              />
+            </div>
+          ))}
         </Carousel>
       </div>
 
@@ -105,18 +104,18 @@ const Home = ({ global }) => {
             </p>
           </div>
           <div className='flex flex-wrap items-center justify-center'>
-            {project.data.map((proj) => (
+            {listlogo.project.map((proj) => (
               <div
-                key={proj.id}
+                key={proj.url}
                 className='w-36 h-36 rounded-lg bg-[#ffffff] border-2 border-[#DC143C] cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 m-2'
               >
-                <a href={`${proj.attributes.link}`}>
+                <a href={`${proj.link}`}>
                   <img
-                    src={`https://bevietka2.herokuapp.com${proj.attributes.logo.data.attributes.url}`}
+                    src={`${proj.url}`}
                     className='h-3/4 p-1 w-full rounded-lg '
                   />
                   <p className='text-center text-[black] text-lg font-medium cursor-pointer'>
-                    {proj.attributes.name} dự án
+                    {proj.number} dự án
                   </p>
                 </a>
               </div>
